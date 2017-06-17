@@ -8,3 +8,7 @@ In the future I'm going to submit some of my codes using github. I have been usi
 # Test push
 
 Try to update the README file from local machine.
+
+# Test branch and merge
+
+Test.
