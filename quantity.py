@@ -43,6 +43,14 @@ class Quantity(object):
         assert isinstance(other, Quantity)
         return Quantity(self.quantity + other.quantity)
 
+    # implement this method to use sum() to sum a list of quantities.
+    # when adding all elements of a list, the sum is originally initialized as 0
+    # then keep adding elements from the list.
+    # see builtin_add() in Python/builtinmodule.c
+    def __radd__(self, other):
+        assert other == 0
+        return Quantity(self.quantity)
+
     def __sub__(self, other):
         assert isinstance(other, Quantity)
         return Quantity(self.quantity - other.quantity)
