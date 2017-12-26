@@ -36,6 +36,9 @@ class Quantity(object):
         assert isinstance(other, Quantity)
         return self.quantity > other.quantity
 
+    def __neg__(self):
+        return Quantity(-self.quantity)
+
     def __add__(self, other):
         assert isinstance(other, Quantity)
         return Quantity(self.quantity + other.quantity)
