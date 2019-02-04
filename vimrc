@@ -31,8 +31,8 @@ set smartindent
 set tabstop=4    "  1 tab == 4 spaces
 set shiftwidth=4 "  1 tab == 4 spaces
 set expandtab    "  Use spaces instead of tabs
-"" show ALL white spaces as dot
-set listchars=trail:·
+"" show ALL white spaces as dot, and tab as spaces (instead of ^I)
+set listchars=tab:\ \ ,trail:·
 set list
 
 " backspace works like in other editor
@@ -85,6 +85,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Shougo/neocomplete'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -249,6 +250,15 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Go-vim set
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
 
 
 
